@@ -9,7 +9,8 @@ body {
   background: url(123.jpg);
   background-size: cover;
   background-attachment: fixed;
-  font-family: 'Shadows into Light';
+  font-family: 'roboto';
+  font-weight: 100;
 
 }
 .contenedor-form {
@@ -32,7 +33,6 @@ body {
   border-top: .5px solid #FFF;
   border-bottom: .5px solid #FFF;
   position: absolute;
-  transition: all .5s ease;
   cursor: pointer;
 }
 .contenedor-form .toggle span{
@@ -48,7 +48,8 @@ body {
   margin: 0 0 28px 0;
   font-size: 28px;
   font-weight: 400px;
-  line-height: 1px
+  line-height: 1px;
+  text-align: center;
 }
 
 .contenedor-form input[type="text"],
@@ -63,19 +64,26 @@ body {
   border: none;
   border-radius: 2px;
   border-bottom: 4px solid #8ae8ed;
-  font-family: 'Shadows into Light';
+  font-family: 'roboto';
   font-size: 14px;
   font-weight: normal;
-  margin: 0 0 20px 0;
+  margin: 0 0 0 0;
   transition: all 1s ease;
-
+  position: relative;
+}
+.formulario .form-2 .error,
+.formulario .form-2 .error:focus{
+  border-bottom: 4px solid rgba(245, 30, 22, .8);
 }
 .contenedor-form input[type="text"]:focus,
 .contenedor-form input[type="password"]:focus,
 .contenedor-form input[type="email"]:focus {
   border-bottom: 4px solid #4b43e0;
-
 }
+.contenedor-form input[type="checkbox"]{
+  cursor: pointer;
+}
+
 .contenedor-form input[type="button"] {
   background: rgba(148, 48, 219, .5);
   color: #FFF;
@@ -83,12 +91,13 @@ body {
   width: 100%;
   padding: 10px 0;
   font-weight: normal;
-  font-family: 'shadows into Light';
+  font-family: 'roboto';
   font-size: 20px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.5s;
   border-radius: 1px;
+  margin-top: 10px;
 }
 .contenedor-form input[type="button"]:hover {
   background: rgba(200, 158, 230, .5);
@@ -121,13 +130,102 @@ body {
 }
 .contenedor-form #formulario-1 {
   display:block;
-  transition: all 5s linear;
+  transition: all 1s linear;
 
 }
 .contenedor-form #formulario-2 {
-  transition: all 5s linear;
+  transition: all 1s linear;
 
 }
+.form-2 #error-usuario,
+.form-2 #error-contraseña,
+.form-2 #error-contraseña2,
+.form-2 #error-acepto,
+.form-2 #error-correo,
+.form #usuario-invalido,
+.form #contraseña-invalida {
+  margin-top: 2px;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 0;
+
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-family: 'roboto';
+  font-style: italic;
+  visibility: hidden;
+
+  height: 30px;
+
+}
+
+.form-2 div{
+  position: relative;
+}
+
+
+.form-2 i{
+  height: 20px;
+  width: 20px;
+  color: #8ae8ed;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  visibility: hidden;
+}
+
+
+.form-2 .labelAcepto {
+  margin-top: 0;
+}
+.denegado, .denegado2 {
+  background-color:rgba(255, 255, 255, .5);
+  border: .5px solid rgba(245, 30, 22, .5);
+  border-radius: 2px;
+  height: 30px;
+  margin-top: 5px;
+  text-align: center;
+  display: none;
+  line-height: 30px;
+}
+.denegado i, .denegado2 i{
+  color: red;
+  visibility: visible;
+  left: 10px;
+}
+.creado {
+  background-color:rgba(255, 255, 255, .5);
+  border: .5px solid rgba(145, 250, 140, .5);
+  margin-top: 5px;
+  text-align: center;
+  display: none;
+}
+.creado i{
+  color: rgba(145, 250, 140);
+  visibility: visible;
+  left: 15px;
+}
+.ver{
+  color: white;
+  font-size: 10px;
+  font-weight: 100;
+  font-style:italic;
+  cursor: pointer;
+  text-decoration: none;
+}
+.documentoPruebas {
+  display: block;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+/*RELOJ*/
+
 
 .reloj .input{
   color: #fff;

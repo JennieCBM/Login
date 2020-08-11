@@ -7,7 +7,8 @@
 		<link rel="shortcut icon" type="image/jpg" href="favicon.ico">
 		<title>LOGIN</title>
 		<link rel="stylesheet" href="estiloslogin.css">
-		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,700&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/6ed814f373.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div class="contenedor-form">
@@ -18,16 +19,49 @@
 				<h2>Iniciar sesion</h2>
 				<form class="form" name="form" action="#">
 					<input type="text" id="usuario" name= "usuario" placeholder="Usuario">
+					<p id="usuario-invalido">Favor ingrese un usuario</p>
 					<input type="password" id="password" name= "password" placeholder="Contraseña">
+					<p id="contraseña-invalida">Favor ingrese una contraseña</p>
 					<input type="button" id="iniciar" name ="iniciar" value="Iniciar sesion">
+					<div class="denegado">
+						<p><i class="fas fa-exclamation-triangle" id="icono-denegado"></i>  Favor verifique sus datos</p>
+					</div>
 				</form>
 			</div>
 			<div class="formulario" id="formulario-2">
 				<h2>Crear Cuenta</h2>
 				<form class="form-2" action="#" id="form-2">
-					<input type="text" name="" placeholder="Usuario" id="nuevousuario" required>
-					<input type="password" name="" placeholder="Contraseña" id= "nuevacontraseña" required>
+					<div>
+						<input type="text" name="usuario" placeholder="Usuario" id="nuevousuario" required>
+						<i class="fas fa-check" id="icono-usuario"></i>
+					</div>
+						<p id="error-usuario">Debe tener de 4 a 16 dígitos, solo puede contener numeros, letras y guion bajo</p>
+					<div>
+						<input type="password" name="password" placeholder="Contraseña" id="nuevaContraseña" required>
+						<i class="fas fa-check" id="icono-contraseña"></i>
+					</div>
+						<p id="error-contraseña">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+					<div class="">
+						<input type="password" name="password2" placeholder="Repetir Contraseña" id= "repetirContraseña" required>
+						<i class="fas fa-check" id="icono-contraseña2"></i>
+					</div>
+						<p id="error-contraseña2">Ambas contraseñas deben ser iguales.</p>
+					<div class="">
+						<input type="email" name="correo" id="correo" placeholder="Correo Electronico">
+						<i class="fas fa-check" id="icono-correo"></i>
+					</div>
+						<p id="error-correo">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+						<input type="checkbox" id="acepto" class="acepto" value="">
+						<label for="acepto" class="labelAcepto">Acepto terminos y condiciones</label>
+						<a href="terminos.html" class="ver" target="_blank">(ver Terminos y condiciones)</a>
+						<p id="error-acepto">Este campo es obligatorio.</p>
 					<input type="button" name="" value="crear cuenta" id="registro">
+					<div class="denegado2">
+						<p><i class="fas fa-exclamation-triangle" id="icono-denegado"></i> <b>ERROR:</b> Favor rellena el formulario correctamente. </p>
+					</div>
+					<div class="creado">
+						<p><i class="fas fa-check" id="icono-creado"></i>USUARIO CREADO CON EXITO!</p>
+					</div>
 				</form>
 			</div>
 			<div class="reset-password" id="reset">
@@ -37,6 +71,7 @@
 		<form name="form_reloj" class="reloj">
 				<input type="text" name="reloj" size="10" class="input">
 		</form>
+		<a href="https://docs.google.com/spreadsheets/d/1q8aYVsRfobt66RIa25utIPh1gMo78cPQlcR8bfNXljA/edit#gid=0" class="documentoPruebas" target="_blank">Ver documento de pruebas</a>
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
 		<script src="login2.js"></script>
 		</script>
